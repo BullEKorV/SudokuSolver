@@ -2,4 +2,6 @@
 
 SudokuSolver sudokuSolver = new SudokuSolver();
 
-sudokuSolver.LoadSudoku();
+sudokuSolver.PrintBoard();
+
+Console.ReadLine();
