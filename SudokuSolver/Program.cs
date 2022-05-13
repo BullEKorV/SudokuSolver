@@ -1,7 +1,15 @@
-﻿global using System.IO;
+﻿Console.WriteLine("Write path to sudoku you want to solve");
 
-SudokuSolver sudokuSolver = new SudokuSolver();
+string pathName = Console.ReadLine();
 
-sudokuSolver.PrintBoard();
+while (!File.Exists(pathName + ".txt"))
+{
+    Console.WriteLine("Write path to sudoku you want to solve");
+
+    pathName = Console.ReadLine();
+
+}
+
+SudokuSolver sudokuSolver = new SudokuSolver($@"{pathName}.txt");
 
 Console.ReadLine();
